@@ -84,3 +84,14 @@ button:focus-visible {
   border-radius: 5px;
   border: 1px solid;
 }
+.card {
+  color: black;
+}
+.cardMeal{
+  display: flex;
+  gap: 2em;
+ 
+}
+.cardMeal img{
+  width: 400px;
+}
