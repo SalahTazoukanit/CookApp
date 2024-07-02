@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Card from "./components/Card";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [meals, setMeals] = useState([]);
@@ -22,15 +23,9 @@ function App() {
 
   return (
     <>
-      {/* <h1>React Cooking App</h1> */}
-      <input
-        className="searchBar"
-        type="text"
-        placeholder="Chercher un produit (en anglais)"
-        onChange={(e) => {
-          setSearchBar(e.target.value);
-        }}
-      />
+      <h1>Cooking App React.js</h1>
+      {/* composant importé en lui donnant une props function 'setSearchBar' */}
+      <SearchBar setSearchBar={setSearchBar} />
       <div className="card-container">
         {meals &&
           meals.slice(0, 24).map((meal) => (
